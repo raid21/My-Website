@@ -31,16 +31,16 @@
                         <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">why me</a>
+                        <a class="nav-link" href="#" data-value="why-me">why me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">resume</a>
+                        <a class="nav-link" href="#" data-value="resume">resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">portfolio</a>
+                        <a class="nav-link" href="#" data-value="portfolio">portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">contact me</a>
+                        <a class="nav-link" href="#" data-value="contact-me">contact me</a>
                     </li>
                 </ul>
             </div>
@@ -67,8 +67,8 @@
     </div>
     <!-- end header of slider -->
 
-    <!-- start of features -->
-    <div class="features text-center">
+    <!-- start of why-me -->
+    <div id="why-me" class="why-me text-center">
         <div class="container">
             <h2 class="text-uppercase font-weight-bold">Why me</h2>
             <div class="row">
@@ -95,10 +95,10 @@
             </div>
         </div>
     </div>
-    <!-- end of features -->
+    <!-- end of why-me -->
 
     <!-- start of resume -->
-    <div class="resume text-center">
+    <div id="resume" class="resume text-center">
         <div class="container">
             <h2 class="text-uppercase font-weight-bold">resume</h2>
             <p>If you want to know more about my skills, feel free to download my cv from here.</p>
@@ -107,7 +107,7 @@
     </div>
     <!-- end of resume -->
     <!-- star of portfolio -->
-    <div class="portfolio">
+    <div id="portfolio" class="portfolio">
         <div class="container">
             <h2 class="text-uppercase text-center font-weight-bold">Portfolio</h2>
             <p class="text-center">In this section you will see some of my projects.</p>
@@ -166,19 +166,53 @@
     <!-- end of portfolio -->
 
     <!-- start of contact me -->
-    <div class="contact-me">
+    <div id="contact-me" class="contact-me">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 text-center text-md-left">
                     <p>You like me? Let's work together.</p>
                 </div>
                 <div class="col-md-4 text-center text-md-right">
-                    <a href="#">Contact Me</a>
+                    <span data-toggle="modal" data-target="#exampleModal">Contact Me</span>
                 </div>
             </div>
         </div>
     </div>
     <!-- end of contact me -->
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="forms">
+                <h5 class="card-header font-weight-bold text-center py-4">Contact me</h5>
+                <div class="card-body px-lg-5 pt-0">
+                    <form class="text-center" action="#!">
+                        <div class="md-form mt-3">
+                            <label for="materialContactFormName">Name</label>
+                            <input type="text" id="materialContactFormName" class="form-control">
+                        </div>
+                        <div class="md-form mt-3">
+                            <label for="materialContactFormEmail">E-mail</label>
+                            <input type="email" id="materialContactFormEmail" class="form-control">
+                        </div>
+                        <div class="md-form mt-3">
+                            <label for="materialContactFormMessage">Message</label>
+                            <textarea id="materialContactFormMessage" class="form-control md-textarea" rows="3"></textarea>
+                        </div>
+                        <button class="btn btn-outline-info btn-rounded btn-block my-4" type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- start of footer -->
     <div class="footer">
@@ -238,6 +272,10 @@
         </div>
     </div>
     <!-- end of copyright -->
+
+    <!-- start of contact popup -->
+    
+    <!-- end of contact popup -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>

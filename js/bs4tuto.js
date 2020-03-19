@@ -21,5 +21,12 @@ $(function (){
         e.preventDefault();
         $('html, body').animate({scrollTop:0}, '300');
     });
-// end of scroll to top button
+    // end of scroll to top button
+
+    // smooth scroll to the desired div
+    $('.navbar-nav li a').click(function () {
+    $('html, body').animate({
+        scrollTop: $('#' + $(this).data('value')).offset().top
+    }, 1000);
+    });
 })
