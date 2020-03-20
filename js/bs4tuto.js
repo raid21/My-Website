@@ -74,3 +74,64 @@ function deletefunc(){
 }
 // end of portfolio images modal
 
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+function errBorderColor(eleId) {
+    eleId.style.borderColor = "red";
+}
+function sucColor(eleId){
+    eleId.style.borderColor = "green";
+}
+
+// Defining a function to validate form 
+function validateform() {
+    // Retrieving the values of form elements
+    let name = document.forms["myform"]["name"].value;
+    let email = document.forms["myform"]["email"].value;
+    let valName = document.getElementById("materialContactFormName");
+    let valEmail = document.getElementById("materialContactFormEmail");
+
+    // Defining error variables with a default value
+    let nameErr = emailErr = selectErr =true;
+    // Validate name
+    if (name == "") {
+        errBorderColor(valName);
+        printError("nameErr", "Please enter your name");
+    } else {
+        let regex = /^[a-zA-Z\s]+$/;
+        if (regex.test(name) === false) {
+            errBorderColor(valName);
+            printError("nameErr", "Name mustn't contain any numbers or special characters");
+        } else {
+            sucColor(valName);
+            printError("nameErr", "");
+            nameErr = false;
+        }
+    }
+    // Validate email address
+    if (email == "") {
+        errBorderColor(valEmail);
+        printError("emailErr", "Please enter your email address");
+    } else {
+        // Regular expression for basic email validation
+        let regex = /^\S+@\S+\.\S+$/;
+        if (regex.test(email) === false) {
+            errBorderColor(valEmail);
+            printError("emailErr", "Please enter a correct email address");
+        } else {
+            sucColor(valEmail);
+            printError("emailErr", "");
+            emailErr = false;
+        }
+    }
+    // Prevent the form from being submitted if there are any errors
+    if ((nameErr || emailErr) == true) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
