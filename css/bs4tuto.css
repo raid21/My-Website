@@ -127,9 +127,9 @@ ul{list-style: none;padding-inline-start: 0;}
 @media(max-width: 992px){
     .slider .carousel-inner h1{font-size: 50px;}
 }
-.slider .carousel-one{background-image: url("../img/slider6.jpg");}
-.slider .carousel-two{background-image: url("../img/pic3.jpg");}
-.slider .carousel-three{background-image: url("../img/pic2.jpg");}
+.slider .carousel-one{background-image: url("../img/slider3.jpg");}
+.slider .carousel-two{background-image: url("../img/slider2.jpg");}
+.slider .carousel-three{background-image: url("../img/slider1.jpg");}
 /* end of header slider */
 
 /* start of why-me */
@@ -161,8 +161,8 @@ ul{list-style: none;padding-inline-start: 0;}
 .portfolio{padding: 50px 0;}
 .portfolio h2{font-size: 40px; margin-bottom: 20px;}
 .portfolio .card{margin-bottom: 20px;}
-.resume p{font-size: 20px; color: #6a6a6a; width: 80%; margin: 0 auto 40px; letter-spacing: 2px;}
-.portfolio .card .card-title{color: #08526d;}
+.portfolio h4{font-size: 20px; color: #6a6a6a; width: 80%; margin: 0 auto 40px; letter-spacing: 2px;}
+.portfolio .card .card-title{color: #0c1113;}
 .portfolio .card .card-text{color: #797878;}
 .portfolio .card .card-link, .portfolio .card-link:hover{color: #08526d;}
 /* end of portfolio */
@@ -245,3 +245,7 @@ ul{list-style: none;padding-inline-start: 0;}
 #button:active {background-color: #08526d;}
 #button.show {opacity: 1;visibility: visible;}
 /* end of scroll to top button */
+
+/* style for the header of modals */
+.modal-header {padding: .2rem 1rem;}
+/* end of style for the header of modals */

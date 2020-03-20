@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bs4 tuto</title>
+    <title>Boulahdid Raid</title>
     <link rel="stylesheet" href="/home/raid/Desktop/test/fontawsome/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bs4tuto.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
 </head>
 
 <body>
@@ -110,16 +114,28 @@
     <div id="portfolio" class="portfolio">
         <div class="container">
             <h2 class="text-uppercase text-center font-weight-bold">Portfolio</h2>
-            <p class="text-center">In this section you will see some of my projects.</p>
+            <h4 class="text-center">In this section you will see some of my projects.</h4>
             <div class="row">
                 <!-- start grid -->
                 <div class="col-sm-6 col-lg-3">
                     <div class="card">
-                        <img src="img/p1.png" alt="" class="card-img-top">
+                        <img src="img/port/boat_intro.png" alt="" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title text-capitalize">al basma charitable</h5>
-                            <p class="card-text">This photo presents the home page of the 1st website i've created. I named it: "Al Basma Charitable".</p>
-                            <a href="#" class="card-link">Read More</a>
+                            <h5 class="card-title text-capitalize">boat travel</h5>
+                            <p class="card-text">simple website for travel agency by boat .</p>
+                            <a class="card-link" id="port1" data-toggle="modal" data-target="#staticBackdrop" role="button" onclick="openModel(this.id)">See Full Picture</a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- end grid -->
+                <!-- start grid -->
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card">
+                        <img src="img/port/ui_intro.png" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize">ui page</h5>
+                            <p class="card-text">simple website for small business .</p>
+                            <a class="card-link" id="port2" data-toggle="modal" data-target="#staticBackdrop" role="button" onclick="openModel(this.id)">See Full Picture</a>
                         </div>
                     </div>
                 </div>
@@ -127,11 +143,11 @@
                 <!-- start grid -->
                 <div class="col-sm-6 col-lg-3">
                     <div class="card">
-                        <img src="img/p1.png" alt="" class="card-img-top">
+                        <img src="img/port/login.png" alt="" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title text-capitalize">al basma charitable</h5>
-                            <p class="card-text">This photo presents the home page of the 1st website i've created. I named it: "Al Basma Charitable".</p>
-                            <a href="#" class="card-link">Read More</a>
+                            <h5 class="card-title text-capitalize">sign page</h5>
+                            <p class="card-text">responsive login page for opensource club. .</p>
+                            <a class="card-link" id="port3" data-toggle="modal" data-target="#staticBackdrop" role="button" onclick="openModel(this.id)">See Full Picture</a>
                         </div>
                     </div>
                 </div>
@@ -139,27 +155,29 @@
                 <!-- start grid -->
                 <div class="col-sm-6 col-lg-3">
                     <div class="card">
-                        <img src="img/p1.png" alt="" class="card-img-top">
+                        <img src="img/port/regis.png" alt="" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title text-capitalize">al basma charitable</h5>
-                            <p class="card-text">This photo presents the home page of the 1st website i've created. I named it: "Al Basma Charitable".</p>
-                            <a href="#" class="card-link">Read More</a>
+                            <h5 class="card-title text-capitalize">signup page</h5>
+                            <p class="card-text">responsive signup page for a club".</p>
+                            <a class="card-link" id="port4" data-toggle="modal" data-target="#staticBackdrop" role="button" onclick="openModel(this.id)">See Full Picture</a>
                         </div>
                     </div>
                 </div>
                 <!-- end grid -->
-                <!-- start grid -->
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card">
-                        <img src="img/p1.png" alt="" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title text-capitalize">al basma charitable</h5>
-                            <p class="card-text">This photo presents the home page of the 1st website i've created. I named it: "Al Basma Charitable".</p>
-                            <a href="#" class="card-link">Read More</a>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" onclick="deletefunc()">&times;</span>
+                    </button>
                 </div>
-                <!-- end grid -->
+                <div class="modal-body" id="addPicture">
+                </div>
             </div>
         </div>
     </div>
@@ -173,46 +191,49 @@
                     <p>You like me? Let's work together.</p>
                 </div>
                 <div class="col-md-4 text-center text-md-right">
-                    <span data-toggle="modal" data-target="#exampleModal">Contact Me</span>
+                    <span data-toggle="modal" data-target="#staticBackdrop">Contact Me</span>
                 </div>
             </div>
         </div>
     </div>
     <!-- end of contact me -->
     <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <div class="forms">
-                <h5 class="card-header font-weight-bold text-center py-4">Contact me</h5>
-                <div class="card-body px-lg-5 pt-0">
-                    <form class="text-center" action="#!">
-                        <div class="md-form mt-3">
-                            <label for="materialContactFormName">Name</label>
-                            <input type="text" id="materialContactFormName" class="form-control">
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="forms">
+                        <h5 class="card-header font-weight-bold text-center py-4">Contact me</h5>
+                        <div class="card-body px-lg-5 pt-0">
+                            <form class="text-center" action="#!">
+                                <div class="md-form mt-3">
+                                    <label for="materialContactFormName">Name</label>
+                                    <input type="text" id="materialContactFormName" class="form-control">
+                                </div>
+                                <div class="md-form mt-3">
+                                    <label for="materialContactFormEmail">E-mail</label>
+                                    <input type="email" id="materialContactFormEmail" class="form-control">
+                                </div>
+                                <div class="md-form mt-3">
+                                    <label for="materialContactFormMessage">Message</label>
+                                    <textarea id="materialContactFormMessage" class="form-control md-textarea"
+                                        rows="3"></textarea>
+                                </div>
+                                <button class="btn btn-outline-info btn-rounded btn-block my-4"
+                                    type="submit">Send</button>
+                            </form>
                         </div>
-                        <div class="md-form mt-3">
-                            <label for="materialContactFormEmail">E-mail</label>
-                            <input type="email" id="materialContactFormEmail" class="form-control">
-                        </div>
-                        <div class="md-form mt-3">
-                            <label for="materialContactFormMessage">Message</label>
-                            <textarea id="materialContactFormMessage" class="form-control md-textarea" rows="3"></textarea>
-                        </div>
-                        <button class="btn btn-outline-info btn-rounded btn-block my-4" type="submit">Send</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
     </div>
-  </div>
 
     <!-- start of footer -->
     <div class="footer">
@@ -221,7 +242,8 @@
                 <div class="col-md-6">
                     <div class="info">
                         <h2 class="text-uppercase font-weight-bold"><span>rai</span><span>d.b</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -229,13 +251,13 @@
                         <h2>helpful links</h2>
                         <div class="row">
                             <div class="col">
-                            <ul>
-                                <li>images by: </li>
-                                <li><a href="https://unsplash.com/@emilep">emilep</a></li>
-                                <li><a href="https://unsplash.com/@markusspiske">markus spiske</a></li>
-                                <li><a href="https://burst.shopify.com/@sarahpflugphoto">sarah pflug</a></li>
-                            </ul>
-                        </div>
+                                <ul>
+                                    <li>images by: </li>
+                                    <li><a href="https://unsplash.com/@emilep">emilep</a></li>
+                                    <li><a href="https://unsplash.com/@markusspiske">markus spiske</a></li>
+                                    <li><a href="https://burst.shopify.com/@sarahpflugphoto">sarah pflug</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -244,9 +266,11 @@
                         <h2>contact me</h2>
                         <ul>
                             <li><strong>address: </strong>city larbi ben m'hidi - bachir k6 bt3 n33,
-                                 21045 skikda, algeria.</li>
+                                21045 skikda, algeria.</li>
                             <li><strong>phone</strong>: +213(0) 794766196</li>
-                            <li><strong>email</strong>: <a href="mailto:boulahdidraid18@gmail.com?subject=contact-me">boulahdidraid18@gmail.com</a></li>
+                            <li><strong>email</strong>: <a
+                                    href="mailto:boulahdidraid18@gmail.com?subject=contact-me">boulahdidraid18@gmail.com</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -259,12 +283,16 @@
     <div class="copyright">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 text-center text-sm-left text-uppercase font-weight-bold"><p>copyright &copy; 2020 raid boulahdid</p></div>
+                <div class="col-sm-6 text-center text-sm-left text-uppercase font-weight-bold">
+                    <p>copyright &copy; 2020 raid boulahdid</p>
+                </div>
                 <div class="col-sm-6 text-center text-sm-right">
                     <ul class="icons">
                         <li><a href="https://www.facebook.com/Mandalore21/"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com/raid_boulahdid/"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/raid-boulahdid-0752a0140/"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.instagram.com/raid_boulahdid/"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/raid-boulahdid-0752a0140/"><i
+                                    class="fab fa-linkedin-in"></i></a></li>
                         <li><a href="https://github.com/raid21"><i class="fab fa-github"></i></a></li>
                     </ul>
                 </div>
@@ -274,7 +302,7 @@
     <!-- end of copyright -->
 
     <!-- start of contact popup -->
-    
+
     <!-- end of contact popup -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
